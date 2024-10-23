@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Лабораторна робота №4</title>
+  </head>
+  <body>
+    <h1>Моя перша HTML-форма</h1>
+    <form name="myForm" action="https://httpbin.org/post" method="post">
+      <fieldset>
+        <legend>Введіть дані про себе</legend>
+        <div>
+          <label for="name">Ім'я:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="birthday">Дата народження:</label>
+          <input type="date" id="birthday" name="birthday_date" required>
+        </div>
+        <div>
+          <label for="email">Gmail:</label>
+          <input type="email" id="email" name="gmail" required>
+        </div>
+        <div>
+          <label for="message">Повідомлення:</label>
+          <textarea id="message" name="comment" rows="4"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Ваші улюблені напої</legend>
+        <div>
+          <label>
+            <input type="checkbox" name="drinks[]" value="coffee">Кава
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="drinks[]" value="tea">Чай
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="drinks[]" value="beer">Пиво
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="drinks[]" value="kumys">Кумис
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Моя національність</legend>
+        <div>
+          <label>
+            <input type="radio" name="nationality" value="ukrainian" required>Українець
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="radio" name="nationality" value="american">Американець
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="radio" name="nationality" value="hungarian">Мадяр
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="form-buttons">
+        <input type="submit" value="Відправити">
+        <input type="reset" value="Очистити">
+      </div>
+    </form>
+    <br>
+    <br>
+    <picture>
+      <source media="(max-width: 468px)" srcset="/api/placeholder/300/500">
+      <img src="https://picsum.photos/id/237/1000/400" alt="Гарна картинка">
+    </picture>
+  </body>
+</html>
